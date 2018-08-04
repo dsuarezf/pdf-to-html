@@ -24,6 +24,10 @@ To run the container interactively:
 
     docker run -it --rm --entrypoint bash -v <absolute-path-on-host>:/data pdf-to-html
     
+How to test if the service is running:
+
+    curl http://localhost:5010/    
+    
 How to test the upload endpoint:
 
     curl -F file=@<file>  http://localhost:5010/api/v1.0/documents/convert
