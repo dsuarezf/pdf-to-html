@@ -12,11 +12,7 @@ By default, this image expects to have input documents in
 **/data/documents** and output documents in **/data/txt** folders inside 
 **/data** which should be mounted from host.
 
-To run the container:
-
-    docker run --rm -v <absolute-path-on-host>:/data pdf-to-html --no-drm 1 /data/documents/<pdf-file> --dest-dir /data/html
-
-To run the container as a RESTFul service:
+To run the container as a service:
 
     docker run --rm -p 5010:6000 --name pdf-to-html pdf-to-html    
  
