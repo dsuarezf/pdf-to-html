@@ -8,10 +8,6 @@ be set if executed behind a proxy):
 
     docker build --build-arg http_proxy=$HTTP_PROXY --build-arg https_proxy=$HTTPS_PROXY --build-arg no_proxy=$NO_PROXY -t pdf-to-html .
     
-By default, this image expects to have input documents in
-**/data/documents** and output documents in **/data/txt** folders inside 
-**/data** which should be mounted from host.
-
 To run the container as a service:
 
     docker run --rm -p 5010:6000 --name pdf-to-html pdf-to-html    
