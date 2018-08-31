@@ -25,7 +25,7 @@ RUN pip install --upgrade pip setuptools wheel
 RUN pip install --upgrade -r /app/requirements.txt
 
 # Set environment variables
-ENV FLASK_APP=/app/src/main/python/pdf-to-html-server.py
+ENV FLASK_APP=/app/src/main/python/pdf_to_html_server.py
 
 # Expose the application's port
 EXPOSE 5010
