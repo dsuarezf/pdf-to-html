@@ -2,9 +2,11 @@ import logging
 import os
 import urllib
 from subprocess import Popen, PIPE
-
 from flask import Flask, request, send_from_directory
 from werkzeug.utils import secure_filename
+
+# Logging configuration
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.DEBUG)
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'pdf'}
@@ -61,8 +63,8 @@ def convert_input_to_html(file):
             basename)
 
     else:
-        logging.error("File extension not recognized: %s", file.filename)
-        return "File not supported."
+        logging.error("File format not supported: %s", file.filename)
+        return "File format not supported"
 
     logging.info("Executing %s", command)
     p = Popen(command.split(), stdout=PIPE, stderr=PIPE)
@@ -80,5 +82,4 @@ def convert_input_to_html(file):
 if __name__ == '__main__':
     # create the folders when setting up your app
     os.makedirs(os.path.join(app.root_path, app.config['UPLOAD_FOLDER']), mode=0o777, exist_ok=True)
-    logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.DEBUG)
     app.run(host='0.0.0.0', port=6000)
