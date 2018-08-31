@@ -24,7 +24,7 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-    return "Module extract-to-text running."
+    return "service extract-to-text running"
 
 
 @app.route('/api/v1.0/documents/convert', methods=['POST'])
