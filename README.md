@@ -1,6 +1,6 @@
 # pdf-to-html
 
-The **pdf-to-html** module transforms PDF files into HTML. It uses the
+The **pdf-to-html** is a REST service that converts PDF files into HTML. It uses the
 pdf2htmlEx [1] tool to convert PDF files.
 
 To build or rebuild the Docker image type (the HTTP_PROXY variable must
@@ -14,7 +14,7 @@ To run the container as a service:
  
 To run the container interactively:
 
-    docker run -it --rm --entrypoint bash -v <absolute-path-on-host>:/data pdf-to-html
+    docker run -it --rm --entrypoint bash pdf-to-html
     
 How to test if the service is running:
 
