@@ -82,4 +82,4 @@ def convert_input_to_html(file):
 if __name__ == '__main__':
     # create the folders when setting up your app
     os.makedirs(os.path.join(app.root_path, app.config['UPLOAD_FOLDER']), mode=0o777, exist_ok=True)
-    app.run(host='0.0.0.0', port=6000)
+    app.run()

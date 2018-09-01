@@ -3,6 +3,12 @@
 The **pdf-to-html** is a REST service that converts PDF files into HTML. It uses the
 pdf2htmlEx [1] tool to convert PDF files.
 
+The service can be executed as a single Python application or within a container.
+
+To execute as a Python application:
+
+    gunicorn --bind 0.0.0.0:5010 --chdir src/main/python wsgi:app
+
 To build or rebuild the Docker image type (the HTTP_PROXY variable must
 be set if executed behind a proxy):
 
