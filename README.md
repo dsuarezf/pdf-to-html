@@ -10,7 +10,7 @@ be set if executed behind a proxy):
     
 To run the container as a service:
 
-    docker run --rm -p 5010:6000 --name pdf-to-html pdf-to-html    
+    docker run --rm -p 5010:6000 --name pdf-to-html pdf-to-html
  
 To run the container interactively:
 

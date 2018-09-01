@@ -2,6 +2,11 @@ FROM ubuntu:16.04
 
 MAINTAINER David Suárez "david.suarez.fuentes@gmail.com"
 
+# Set environment
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+# Install packages and tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
   apt-utils \
   python3-dev \
@@ -13,22 +18,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Clean up apt when done
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Copy resources
 WORKDIR /app
-ADD . /app
+COPY /src/main/python .
+COPY requirements.txt .
 
-# set python 3 as the default python version
+# Set Python3 as the default python version
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
     && update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
+# Update Python tools
 RUN pip install --upgrade pip setuptools wheel
-
 RUN pip install --upgrade -r /app/requirements.txt
 
 # Set environment variables
-ENV FLASK_APP=/app/src/main/python/pdf_to_html_server.py
+ENV FLASK_APP=pdf_to_html_server.py
 
-# Expose the application's port
+# Expose the service's port
 EXPOSE 5010
 
 # Run the application
-CMD ["python", "/app/src/main/python/pdf-to-html-server.py"]
+CMD ["python", "/app/pdf_to_html_server.py"]
