@@ -49,6 +49,7 @@ def extract_to_text():
             file = urllib.urlopen(url)
             filename = url.split('/')[-1]
             filename = secure_filename(filename)
+            file.save(os.path.join(app.root_path, app.config['UPLOAD_FOLDER'], filename))
             return convert_input_to_html(file)
         else:
             return "File not supported."
