@@ -29,7 +29,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
 
 # Update Python tools
 RUN pip install --upgrade pip setuptools wheel
-RUN pip install --upgrade -r /app/requirements.txt
+RUN pip install --upgrade -r requirements.txt
 
 # Set environment variables
 ENV FLASK_APP=pdf_to_html_server.py
