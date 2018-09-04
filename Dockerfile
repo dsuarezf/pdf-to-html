@@ -22,6 +22,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 WORKDIR /app
 COPY /src/main/python .
 COPY requirements.txt .
+RUN mkdir -p uploads
 
 # Set Python3 as the default python version
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
