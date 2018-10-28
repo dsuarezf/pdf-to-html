@@ -15,7 +15,7 @@ be set if executed behind a proxy):
 
 To run the container as a service:
 
-    docker run --rm -p 5010:6000 --name pdf-to-html pdf-to-html
+    docker run --rm -p 6000:6000 --name pdf-to-html pdf-to-html
 
 To run the container interactively:
 
@@ -27,7 +27,7 @@ How to test if the service is running:
 
 How to test the upload endpoint:
 
-    curl -F file=@<file>  http://localhost:5010/api/v1.0/documents/convert
+    curl -F file=@<file>  http://localhost:6000/api/v1.0/documents/convert
 
 ## References
 
