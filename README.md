@@ -23,7 +23,7 @@ To run the container interactively:
 
 How to test if the service is running:
 
-    curl http://localhost:5010/
+    curl http://localhost:6000/
 
 How to test the upload endpoint:
 
