@@ -1,7 +1,6 @@
 # pdf-to-html
 
-The **pdf-to-html** is a REST service that converts PDF files into HTML. It uses the
-pdf2htmlEx [1] tool to convert PDF files.
+The **pdf-to-html** service converts PDF files into HTML. It uses the pdf2htmlEx [1] tool to convert the files.
 
 The service can be executed as a single Python application or within a container.
 
@@ -29,5 +28,9 @@ How to test if the service is running:
 How to test the upload endpoint:
 
     curl -F file=@<file>  http://localhost:5010/api/v1.0/documents/convert
+
+## References
+
+Useful references:
 
 [1] https://github.com/coolwanglu/pdf2htmlEX
