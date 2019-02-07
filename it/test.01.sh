@@ -3,7 +3,7 @@ display_usage() {
     echo -e "\nUsage:\ntest.01.sh -n <number-of-runs> <hostname:port>"
 }
 
-if [  $# -le 1 ] 
+if [  $# -le 2 ] 
 	then 
 		display_usage
 		exit 1
