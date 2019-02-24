@@ -41,4 +41,4 @@ ENV FLASK_APP=pdf_to_html_server.py
 EXPOSE 6000
 
 # Run the application
-CMD ["gunicorn", "-b 0.0.0.0:6000", "-w 4", "wsgi:app"]
+CMD ["gunicorn", "-b 0.0.0.0:6000", "-k gevent", "-w 4", "wsgi:app"]
