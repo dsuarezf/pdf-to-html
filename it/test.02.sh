@@ -4,7 +4,7 @@ display_usage() {
     echo -e "\nUsage:\ntest.02.sh -f <folder> -n <number-of-processes> <hostname:port>"
 }
 
-if [[ ( "$1" == "--help") ||  "$1" == "-h" ]]
+if [[ "$1" == "--help" ||  "$1" == "-h" ]]
 	then
 		display_usage
 		exit 0
