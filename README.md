@@ -33,4 +33,4 @@ How to test the upload endpoint:
 
 Useful references:
 
-[1] https://github.com/coolwanglu/pdf2htmlEX
+* [https://github.com/coolwanglu/pdf2htmlEX](https://github.com/coolwanglu/pdf2htmlEX)
