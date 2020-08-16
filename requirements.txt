@@ -1,3 +1,7 @@
-flask
-gunicorn
-gevent
+Flask==1.0.2
+gunicorn==19.9.0
+gevent==1.4.0
+werkzeug==0.16.0
+
+# Testing
+coverage==5.0.3
