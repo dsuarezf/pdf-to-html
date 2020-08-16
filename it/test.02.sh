@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 display_usage() {
-    echo -e "\nUsage:\ntest.02.sh -f <folder> -n <number-of-processes> <hostname:port>"
+    echo -e "\nUsage:\n`basename $0` -f <folder> -n <number-of-processes> <hostname:port>"
 }
 
 if [[ "$1" == "--help" ||  "$1" == "-h" ]]
@@ -10,7 +10,7 @@ if [[ "$1" == "--help" ||  "$1" == "-h" ]]
 		exit 0
 	fi
 
-if [  $# -le 4 ]
+if [ $# -le 4 ]
 	then
 		display_usage
 		exit 1
