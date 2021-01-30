@@ -34,9 +34,6 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1 \
     && update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
 
-# Update Python tools
-RUN pip install --upgrade pip setuptools wheel
-
 # Install application's packages
 COPY requirements.txt /tmp/
 RUN pip install --upgrade -r /tmp/requirements.txt
