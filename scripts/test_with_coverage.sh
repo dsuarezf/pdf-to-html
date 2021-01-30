@@ -1,16 +1,16 @@
 # Script to run unit tests with coverage
 
 # Tests must be run from this folder
-cd ../src
+cd ..
 
 # Remove previous results
 coverage erase
 
 # Run tests with coverage
-coverage run --source="main/python/." test/test.py
+coverage run --source="src/main/python/." src/test/test.py
 
 # Generate coverage report including only application under test
-coverage report --include="main/python/*.py"
+coverage report --include="src/main/python/*.py"
 
 # Generate XML report for SonarQube
-coverage xml -o test/cobertura.xml
+coverage xml -o src/test/cobertura.xml

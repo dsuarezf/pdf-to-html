@@ -3,7 +3,7 @@
 import sys
 import unittest
 
-sys.path.insert(0, 'main/python')  # Execute test from project's root directory
+sys.path.insert(0, 'src/main/python')  # Execute test from project's root directory
 
 from pdf_to_html_server import app
 
