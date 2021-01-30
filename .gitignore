@@ -1,7 +1,9 @@
+.target
+*.iml
 .idea
-*.log
 venv
-.vscode
+.venv
 __pycache__
+.vscode
 .coverage
 cobertura.xml
