@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL maintainer="david.suarez.fuentes@gmail.com"
+LABEL maintainer="David Suárez"
 
 # Set environment
 ENV LANG C.UTF-8
